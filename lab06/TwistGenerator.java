@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////
 // Brian Falkenstein
 // CSE 2
-// Lab 3
-// Feb 12 2016
+// Lab 6
+// March 6 2016
 import java.util.Scanner; 
 //this program will generate a graphical "twist" or knot of length n
 public class TwistGenerator
@@ -33,6 +33,8 @@ public class TwistGenerator
             System.out.print("\\\n");
         else if(leftover==2)                   //add leftover characters
             System.out.print("\\ \n");
+        else
+            System.out.print("\n");        //if no leftover, still create new line
             
         while(j<cycles)
         {
@@ -44,6 +46,8 @@ public class TwistGenerator
             System.out.print(" \n");
         else if(leftover==2)              //add leftovers for second line
             System.out.print(" X\n");
+        else
+            System.out.print("\n");        //if no leftover, still create new line
             
         while(c<cycles)
         {
@@ -55,5 +59,7 @@ public class TwistGenerator
             System.out.print("/\n");        //add leftovers for third line
         else if(leftover==2)
             System.out.print("/ \n");
+        else
+            System.out.print("\n");          //if no leftover, still create new line
     }
 }
